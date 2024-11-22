@@ -19,6 +19,14 @@ function findCity(cityName) {
     }
 }
 
+
+let distanceTable = tableOfDistance();
+
+function tableOfDistance() {
+    let tabel = document.querySelector("#table");
+    const rows = cities.length;
+    const columns = cities.length + 1; // En extra för header-raden
+
         }
     }
 }

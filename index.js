@@ -9,6 +9,15 @@ function findCity(cityName) {
     for (city of cities) {
         if (city.name === cityName) {
             return city;
+        }
+        if (city.name !== cityName) {
+            document.querySelector("h2").textContent = `${cityFromUser} finns inte i databasen`;
+            document.querySelector("title").textContent = `Not Found`;
+            document.querySelector("h3").textContent = ``;
+
+        }
+    }
+}
 
         }
     }

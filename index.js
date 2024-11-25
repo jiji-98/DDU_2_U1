@@ -20,6 +20,19 @@ let distanceTable = tableOfDistance();
 function tableOfDistance() {
     let tabel = document.querySelector("#table");
 
+    for (let i = 0; i < (cities.length + 1); i++) {
+        const cityIdCell = document.createElement("div");
+        cityIdCell.classList.add("cell");
+        cityIdCell.classList.add("head_column");
+        cityIdCell.style.display = "grid";
+
+        if (i === 0) {
+            cityIdCell.textContent = "";
+        } else {
+            cityIdCell.textContent = cities[i - 1].id;
+        }
+        tabel.appendChild(cityIdCell);
+    }
         }
     }
 }

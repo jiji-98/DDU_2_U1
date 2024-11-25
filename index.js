@@ -43,6 +43,16 @@ function tableOfDistance() {
             cityNameRow.classList.add("even_row");
         }
         tabel.appendChild(cityNameRow);
+
+        for (let k = 0; k < cities.length; k++) {
+            const distanceCell = document.createElement("div");
+            distanceCell.classList.add("cell");
+            if (k % 2 == 0) {
+                distanceCell.classList.add("even_col");
+            }
+            if (j % 2 === 0) {
+                distanceCell.classList.add("even_row");
+            }
         }
     }
 }

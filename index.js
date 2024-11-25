@@ -53,6 +53,26 @@ function tableOfDistance() {
             if (j % 2 === 0) {
                 distanceCell.classList.add("even_row");
             }
+
+            let cellDistanceValue = null;
+            for (let distance of distances) {
+                if (distance.city1 === cities[j].id && distance.city2 === cities[k].id) {
+                    cellDistanceValue = distance.distance;
+                }
+                if (distance.city2 === cities[j].id && distance.city1 === cities[k].id) {
+                    cellDistanceValue = distance.distance;
+                }
+            }
+
+            if (cellDistanceValue) {
+                distanceCell.textContent = cellDistanceValue / 10;
+            }
+
+            
+            tabel.appendChild(distanceCell);
+        }
+    }
+}
         }
     }
 }

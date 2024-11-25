@@ -33,6 +33,16 @@ function tableOfDistance() {
         }
         tabel.appendChild(cityIdCell);
     }
+
+    for (let j = 0; j < cities.length; j++) {
+        let cityNameRow = document.createElement("div");
+        cityNameRow.textContent = cities[j].id + " - " + cities[j].name;
+        cityNameRow.classList.add("head_row");
+        cityNameRow.classList.add("cell");
+        if (j % 2 == 0) {
+            cityNameRow.classList.add("even_row");
+        }
+        tabel.appendChild(cityNameRow);
         }
     }
 }

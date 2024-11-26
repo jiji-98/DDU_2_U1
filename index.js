@@ -73,6 +73,19 @@ function tableOfDistance() {
         }
     }
 }
+
+let cityNameBoxes = [];
+for (let city of cities) {
+    cityNameBoxes.push(city.name);
+}
+for (let i = 0; i < cityNameBoxes.length; i++) {
+    let divCities = document.getElementById("cities");
+    let cityPElement = document.createElement("p");
+    cityPElement.classList.add("cityBox");
+    cityPElement.textContent = cityNameBoxes[i];
+    divCities.appendChild(cityPElement);
+}
+
         }
     }
 }

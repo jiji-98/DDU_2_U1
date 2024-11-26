@@ -117,3 +117,13 @@ for (let path of distances) {
     }
 }
 
+let closestCityObject = null;
+let furthestCityObject = null;
+for (let city of cities) {
+    if (city.id == closestCity) {
+        closestCityObject = city;
+    }
+    if (city.id == furthestCity) {
+        furthestCityObject = city;
+    }
+}

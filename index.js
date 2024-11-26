@@ -100,6 +100,17 @@ for (let path of distances) {
             diffCity = path.city1;
             console.log(diffCity);
         }
+        if (path.distance < closestDistance) {
+            closestDistance = path.distance;
+            closestCity = diffCity;
+            console.log(closestCity);
+            console.log(diffCity);
+        }
+        if (path.distance > furthestDistance) {
+            furthestDistance = path.distance;
+            furthestCity = diffCity;
+            console.log(furthestCity);
+            console.log(diffCity);
         }
     }
 }

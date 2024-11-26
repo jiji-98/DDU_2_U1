@@ -68,7 +68,6 @@ function tableOfDistance() {
                 distanceCell.textContent = cellDistanceValue / 10;
             }
 
-            
             tabel.appendChild(distanceCell);
         }
     }
@@ -90,6 +89,17 @@ let closestCity = undefined;
 let furthestCity = undefined;
 let closestDistance = Infinity;
 let furthestDistance = 0;
+
+for (let path of distances) {
+    if (path.city1 === foundCity.id || path.city2 === foundCity.id) {
+        let diffCity;
+        if (path.city1 === foundCity.id) {
+            diffCity = path.city2;
+            console.log(diffCity);
+        } else {
+            diffCity = path.city1;
+            console.log(diffCity);
+        }
         }
     }
 }

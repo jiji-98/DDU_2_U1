@@ -86,6 +86,10 @@ for (let i = 0; i < cityNameBoxes.length; i++) {
     divCities.appendChild(cityPElement);
 }
 
+let closestCity = undefined;
+let furthestCity = undefined;
+let closestDistance = Infinity;
+let furthestDistance = 0;
         }
     }
 }

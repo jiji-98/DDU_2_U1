@@ -142,3 +142,17 @@ function updateCityElements(cityPElement, className, text) {
     cityPElement.innerHTML += text;
 }
 
+for (let i = 0; i < cityPElements.length; i++) {
+    const cityPElement = cityPElements[i];
+    if (cityPElement.textContent === closestCityObject.name) {
+        updateCityElements(cityPElement, "closest", ` ligger ${closestDistance / 10} mil bort `);
+    }
+    if (cityPElement.textContent === furthestCityObject.name) {
+        updateCityElements(cityPElement, "furthest", ` ligger ${furthestDistance / 10} mil bort `);
+    }
+    if (cityPElement.textContent === foundCity.name) {
+        updateCityElements(cityPElement, "target", "");
+    }
+}
+
+

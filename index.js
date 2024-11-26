@@ -133,3 +133,12 @@ if (foundCity) {
     Av städerna i databasen ligger ${closestCityObject.name} närmast och ${furthestCityObject.name} längst bort
     `;
 }
+
+
+const cityPElements = document.querySelectorAll(".cityBox");
+
+function updateCityElements(cityPElement, className, text) {
+    cityPElement.classList.add(className);
+    cityPElement.innerHTML += text;
+}
+

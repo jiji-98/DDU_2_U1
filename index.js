@@ -17,8 +17,6 @@ function findCity(cityName) {
     }
 }
 
-let distanceTable = tableOfDistance();
-
 function tableOfDistance() {
     let tabel = document.querySelector("#table");
 
@@ -73,6 +71,11 @@ function tableOfDistance() {
             tabel.appendChild(distanceCell);
         }
     }
+}
+
+function updateCityElements(cityPElement, className, text) {
+    cityPElement.classList.add(className);
+    cityPElement.innerHTML += text;
 }
 
 let cityNameBoxes = [];
@@ -134,13 +137,7 @@ if (foundCity) {
     `;
 }
 
-
 const cityPElements = document.querySelectorAll(".cityBox");
-
-function updateCityElements(cityPElement, className, text) {
-    cityPElement.classList.add(className);
-    cityPElement.innerHTML += text;
-}
 
 for (let i = 0; i < cityPElements.length; i++) {
     const cityPElement = cityPElements[i];
@@ -155,4 +152,4 @@ for (let i = 0; i < cityPElements.length; i++) {
     }
 }
 
-
+let distanceTable = tableOfDistance();

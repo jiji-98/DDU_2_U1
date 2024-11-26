@@ -127,3 +127,9 @@ for (let city of cities) {
         furthestCityObject = city;
     }
 }
+
+if (foundCity) {
+    document.querySelector("h3").textContent = `
+    Av städerna i databasen ligger ${closestCityObject.name} närmast och ${furthestCityObject.name} längst bort
+    `;
+}

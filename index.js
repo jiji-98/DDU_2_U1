@@ -5,6 +5,8 @@ const foundCity = findCity(cityFromUser);
 function findCity(cityName) {
     for (let city of cities) {
         if (city.name === cityName) {
+            document.querySelector("h2").textContent = `${city.name} (${city.country}) `; //
+            document.querySelector("title").textContent = `${city.name}`;
             return city;
         }
         if (city.name !== cityName) {

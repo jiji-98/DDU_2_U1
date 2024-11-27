@@ -16,6 +16,7 @@ function findCity(cityName) {
         }
     }
 }
+let distanceTable = tableOfDistance();
 
 function tableOfDistance() {
     let tabel = document.querySelector("#table");
@@ -152,4 +153,3 @@ for (let i = 0; i < cityPElements.length; i++) {
     }
 }
 
-let distanceTable = tableOfDistance();

@@ -16,7 +16,8 @@ function findCity(cityName) {
         }
     }
 }
-let distanceTable = tableOfDistance();
+
+tableOfDistance();
 
 function tableOfDistance() {
     let tabel = document.querySelector("#table");
@@ -134,7 +135,8 @@ for (let city of cities) {
 
 if (foundCity) {
     document.querySelector("h3").textContent = `
-    Av städerna i databasen ligger ${closestCityObject.name} närmast och ${furthestCityObject.name} längst bort
+    Av städerna i databasen ligger ${closestCityObject.name} 
+    närmast och ${furthestCityObject.name} längst bort
     `;
 }
 
